@@ -1,0 +1,87 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+}
+
+video#miVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el espacio disponible */
+}
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: 2; /* Asegúrate de que esto no esté por encima de la barra de enlaces */
+    background: linear-gradient(45deg, #009fff, #ec2f4b);
+
+}
+
+.token-names {
+    position: absolute;
+    top: 30%; /* Ajusta esto según donde quieras que aparezca el primer título */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2; /* Asegúrate de que esté por encima del video */
+}
+
+.tokenName {
+    font-size: 3em; /* Ajusta el tamaño como prefieras */
+    margin-bottom: 0.5em; /* Agrega un espacio entre los títulos */
+}
+
+h1{
+    color: whitesmoke;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Esto ayudará a que el texto resalte sobre variados fondos */
+
+}
+
+button {
+    background-color: whitesmoke;
+    border: 1px solid #ccc; /* Borde ligero para definir el área del botón */
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados para suavizar el aspecto */
+    transition: background-color 0.2s, border-color 0.2s; /* Transición suave para interacciones */
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Cambio sutil para el hover */
+    border-color: #888; /* Borde más oscuro para el hover */
+}
+
+
+.crypto-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.9); /* Un fondo más opaco para mejorar el contraste */
+    color: #fff; /* Cambio el texto a blanco */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    z-index: 3; /* Incrementamos el z-index para asegurar que esté en la parte superior */
+}
+
+
+
+.crypto-links a {
+    color: #fff; /* Cambio los enlaces a blanco */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.crypto-links a:hover {
+    color: rgba(243, 123, 173);
+    text-decoration: underline;
+}
